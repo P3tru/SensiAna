@@ -62,10 +62,10 @@ int main(int argc, char *argv[]) {
 
       ptAsimov[iFile].SetAsimovPoint();
 
-      ptAsimov[iFile].CreateContours1Sigma(ptAsimov[iFile].getSA_s23_dm23()->GetMinimum(),
-                                           ptAsimov[iFile].getSA_s23_dm23());
-      ptAsimov[iFile].CreateContours2Sigma(ptAsimov[iFile].getSA_s23_dm23()->GetMinimum(),
-                                           ptAsimov[iFile].getSA_s23_dm23());
+//      ptAsimov[iFile].CreateContours1Sigma(ptAsimov[iFile].getSA_s23_dm23()->GetMinimum(),
+//                                           ptAsimov[iFile].getSA_s23_dm23());
+//      ptAsimov[iFile].CreateContours2Sigma(ptAsimov[iFile].getSA_s23_dm23()->GetMinimum(),
+//                                           ptAsimov[iFile].getSA_s23_dm23());
 
 
       ptAsimov[iFile].CreateCanvasContours();

@@ -114,8 +114,7 @@ void PTAsimov::SetNumuHistograms() {
                               masterName.c_str(),
                               "SA_s23_dm23"),
                          "Asimov Sensitivity",
-                         // nbBins[s23], StartValue[s23], LastValue[s23],
-                         nbBins[dm32], StartValue[dm32], LastValue[dm32],
+                          nbBins[s23], StartValue[s23], LastValue[s23],
                          nbBins[dm32], StartValue[dm32], LastValue[dm32]);
 
   SA_dm23_1D = new TH1D(Form("%s_%s",
@@ -128,8 +127,7 @@ void PTAsimov::SetNumuHistograms() {
                              masterName.c_str(),
                              "SA_s23_1D"),
                         "Asimov Sensitivity",
-                        nbBins[dm32], StartValue[dm32], LastValue[dm32]);
-                        // nbBins[s23], StartValue[s23], LastValue[s23]);
+                         nbBins[s23], StartValue[s23], LastValue[s23]);
 
 }
 
@@ -185,10 +183,9 @@ void PTAsimov::CreateNumuContours(Int_t *Indexa, double *AvNLLtota) {
     }
 
 
-    SA_s23_dm23->SetBinContent((*Indexa % nbBins[dm32]) + 1,
-                               TMath::FloorNint(*Indexa / nbBins[dm32]) + 1,
+    SA_s23_dm23->SetBinContent((*Indexa % nbBins[s23]) + 1,
+                               TMath::FloorNint(*Indexa / nbBins[s23]) + 1,
                                2 * (*AvNLLtota - globalMinLL));
-    // exp(-(*AvNLLtota - globalMinLL)));
 
   }
 
