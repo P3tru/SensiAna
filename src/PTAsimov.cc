@@ -246,6 +246,8 @@ void PTAsimov::SetBestFitPoint() {
   best_all = new TGraph(1);
   best_all->SetPoint(0, s23MinVal, dm23MinVal);
 
+  best_all->SetName("gr_BF");
+
   PrepareBestPoint(best_all,BestFitColor);
 
 }
@@ -548,6 +550,7 @@ void PTAsimov::WriteOutputFile() {
   SA_s23_1D->Write();
 
   c_s23_dm23->Write();
+  best_all->Write();
   FOut->Close();
 
   TString *canvname = new TString("t23_dm23");
